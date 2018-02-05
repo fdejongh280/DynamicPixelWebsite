@@ -396,7 +396,7 @@ body{
     -ms-flex-align:center;
     align-items:center;
     text-decoration:none;
-    color:#fff
+    color:#0e0e0e;
 }
 .header--logo p{
     margin:0 0 0 10px;
@@ -499,7 +499,7 @@ body{
 .side-nav>li{
     position:relative;
     top:-5px;
-    color:#fff;
+    color:#0e0e0e;
     font-size:6px;
     cursor:pointer
 }
@@ -507,11 +507,11 @@ body{
     position:relative;
     top:3px;
     left:10px;
-    color:#fff;
+    color:#0e0e0e;
     font-size:14px;
     font-weight:300;
     opacity:0;
-    visibility:hidden
+    visibility:hidden;
 }
 .side-nav>li::before{
     position:absolute;
@@ -519,7 +519,7 @@ body{
     left:10px;
     color:#555;
     font-size:14px;
-    font-weight:300
+    font-weight:300;
 }
 .side-nav li:nth-child(1)::before{
     content:"01"
@@ -549,7 +549,7 @@ body{
 }
 .side-nav li.is-active::before{
     left:-33px;
-    color:#fff
+    color:#0e0e0e;
 }
 .intro{
     position:relative;
