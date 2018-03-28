@@ -26,6 +26,10 @@
     font-weight:300;
     font-style:normal
 }
+@font-face{
+    font-family:'Open Sans';src:url(fonts/OpenSans-Bold.woff2?v=1.101) 
+    format("woff2"),url(fonts/OpenSans-Bold.woff?v=1.101) 
+    format("woff");font-weight:700;font-style:normal}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{
     font-family:sans-serif;
@@ -33,7 +37,8 @@ html{
     -webkit-text-size-adjust:100%
 }
 body{
-    margin:0
+    margin:0;
+    
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
     display:block
@@ -190,7 +195,7 @@ body{
     -webkit-tap-highlight-color:#FFF498
 }
 body{
-    background-color:#fdfdfd;
+    background-color: white;
     font-size:14px;
     line-height:1.6;
     font-family:"Montserrat",sans-serif;
@@ -278,7 +283,7 @@ body{
     -webkit-justify-content:center;
     -ms-flex-pack:center;
     justify-content:center;
-    background-color:#0c0c0c;
+    background-color:white;
     z-index:12
 }
 .device-notification--logo{
@@ -435,11 +440,16 @@ body{
 }
 .header--nav-toggle::before{
     bottom:5px;
-    width:23px
+    left:-2.6px;
+    width:23px;
+    height: 1.5px;
+
 }
 .header--nav-toggle::after{
     top:5px;
-    width:23px
+    width:23px;
+    left:-2.6px;
+    height: 1.5px;
 }
 .header--cta{
     position:absolute;
@@ -586,15 +596,16 @@ body{
     bottom:20px;
     left:-15px;
     right:0;
-    height:2px;
-    background-color:#282828;
+    height:1px;
+    background-color:#c0c0c0;
 }
 .intro--banner::after{
     content:"";
     position:absolute;
-    bottom:18px;
+    bottom:17px;
     left:0;
-    width:30px;
+    width:40px;
+    margin-top: 1px;
     height:4px;
     background-color:#fc1152;
 }
@@ -608,25 +619,24 @@ body{
 .intro--banner button{
     position:relative;
     padding:5px 17px 5px 12px;
-    font-weight:700;
+    font-family: "Open Sans";
+    font-weight: 700;
     text-transform:uppercase;
     background-color:transparent;
     border:none;
+    color: white;
 }
 .intro--banner button .btn-background{
     position:absolute;
     top:0;
-    left:23px;
+    left:0px;
     right:0;
     height:100%;
     background-color:#fc1152;
     z-index:-1;
-    -webkit-transition:left .2s ease-in-out;
-    transition:left .2s ease-in-out;
+ 
 }
-.intro--banner button:hover .btn-background{
-    left:0
-}
+
 .intro--banner button:focus{
     outline:none
 }
@@ -634,7 +644,7 @@ body{
     position:relative;
     left:5px;
     width:15px;
-    fill:#0f0f0f;
+    fill:white;
 }
 .intro--banner img{
     position:absolute;
@@ -661,9 +671,7 @@ body{
     -webkit-transition:color .2s ease-in-out;
     transition:color .2s ease-in-out
 }
-.intro--options>a:hover{
-    color:#fff
-}
+
 .intro--options h3{
     font-size:16px;
     text-transform:uppercase
@@ -942,55 +950,21 @@ body{
     position:relative;
     height:475px
 }
-.about--banner::before{
-    content:"";
-    position:absolute;
-    top:20px;
-    left:200px;
-    -webkit-transform:rotate(-25deg);
-    transform:rotate(-25deg);
-    border:5px solid #fc1152;;
-    border-right-color:transparent;
-    border-bottom-color:transparent
-}
-.about--banner::after{
-    content:"";
-    position:absolute;
-    top:75px;
-    left:400px;
-    -webkit-transform:rotate(45deg);
-    transform:rotate(45deg);
-    width:10px;
-    height:10px;
-    background-color:#fc1152;
-}
-.about--banner h2{
-    position:relative;
-    margin-top:35px;
-    font-size:68px;
-    font-weight:900;
-    line-height:1;
-    z-index:1;
-}
-.about--banner h2::before{
-    content:"";
-    position:absolute;
-    top:60px;
-    left:268px;
-    width:30px;
-    height:30px;
-    background-color:#fc1152;
-    border-radius:50%;
-}
-.about--banner h2::after{
-    content:"";
-    position:absolute;
-    top:255px;
-    left:255px;
-    width:10px;
-    height:10px;
-    background-color:#fc1152;
-}
+
+.about--banner h3{
+    font-size: 35px;
+    left: 50%;
+    margin: auto;
+    text-align: center;
+    z-index: 10;
+    }
+   .about--banner .centerTitle
+    {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+    }
+
 .about--banner a{
     padding:5px 17px 5px 0;
     text-decoration:none;
@@ -999,21 +973,88 @@ body{
     text-transform:uppercase;
     background-color:transparent
 }
-.about--banner a:hover svg{
-    left:10px
+.about--banner .elwinAboutDiv{
+display: inline-block;
+height: 50%;
+width: 100%;
 }
-.about--banner a svg{
-    position:relative;
-    left:5px;
-    width:15px;
-    fill:#fff;
-    -webkit-transition:left .2s ease-in-out;
-    transition:left .2s ease-in-out
+
+.about--banner .florisAboutDiv{
+    height: 100%;
 }
-.about--banner img{
-    position:absolute;
-    bottom:-90px;
-    right:-12px
+
+
+.about--banner .elwinAboutDiv h4
+{
+     margin-top: 100px;
+     margin-bottom: 0px;
+     font-size: 25px;
+     font-weight: 500;
+     
+}
+.about--banner .elwinAboutDiv .strokehr
+{
+     color: #c0c0c0;
+     margin-top: 2px;
+     margin-bottom:0px;
+     opacity: .3;
+     background-color: #c0c0c0;
+     z-index: -1;
+     position:relative;
+}
+.about--banner .elwinAboutDiv .blockhr
+{
+     color: #ff004e;
+     width: 70px;
+    margin-top:-1px;
+    z-index: 10;
+     background-color: #ff004e;
+}
+.about--banner .florisAboutDiv .strokehr
+{
+     color: #c0c0c0;
+     margin-top: 2px;
+     margin-bottom:0px;
+     opacity: .3;
+     background-color: #c0c0c0;
+     z-index: -1;
+     position:relative;
+}
+.about--banner .florisAboutDiv .blockhr
+{
+     color: #ff004e;
+     width: 70px;
+    margin-top:-2px;
+    z-index: 10;
+     background-color: #ff004e;
+}
+
+.about--banner .florisAboutDiv h4
+{
+     font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 110px;
+     font-weight: 500;
+     text-align: right;
+}
+.about--banner .florisAboutDiv p
+{
+     text-align: right;
+}
+
+.about--banner .elwin{
+    float: left;
+    margin-right: -20px;
+    bottom:0px;
+    width: 270px;
+    z-index: -1;
+}
+.about--banner .floris{
+    float: right;
+    width: 270px;
+    margin-top: -130px;
+    margin-left: -20px;
+     z-index: -1;
 }
 .about--options{
     display:-webkit-box;
@@ -1062,9 +1103,6 @@ body{
     transition:bottom .2s ease-in-out,left .2s ease-in-out
 }
 @media (max-width: 767px){
-    .about--banner{
-        height:305px
-    }
     .about--banner::before{
         top:0;
         left:125px
@@ -1073,9 +1111,8 @@ body{
         top:35px;
         left:260px
     }
-    .about--banner h2{
-        margin-top:10px;
-        font-size:44px
+    .about--banner h3{
+        top: -200px;
     }
     .about--banner h2::before{
         top:28px;
@@ -1085,8 +1122,12 @@ body{
         top:163px;
         left:163px
     }
-    .about--banner img{
-        width:315px
+    .about--banner .floris{
+        width:240px;
+    }
+        .about--banner .elwin{
+        width:240px;
+        top: 20px;
     }
 }
 @media (max-width: 600px){
@@ -1124,10 +1165,7 @@ body{
     left:0;
     width:100%;
     height:100%;
-    background-image:url("../img/contact-visual.png");
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat
+    background-color: #eeeeef;
 }
 .contact--lockup{
     position:relative;
@@ -1135,8 +1173,7 @@ body{
     display:-webkit-flex;
     display:-ms-flexbox;
     display:flex;
-    width:900px;
-    max-width:75%;
+    max-width:80%;
     height:100%;
     -webkit-box-align:center;
     -webkit-align-items:center;
@@ -1146,26 +1183,28 @@ body{
     -webkit-justify-content:flex-end;
     -ms-flex-pack:end;
     justify-content:flex-end;
-    margin:0 auto
+    margin:0 auto;
+
+}
+.contact--lockup .contactImage
+{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    left:0px;
 }
 @media (max-width: 1180px){
-    .contact--lockup{
-        max-width:90%
-    }
+
 }
 @media (max-width: 767px){
-    .contact--lockup{
-        -webkit-box-pack:center;
-        -webkit-justify-content:center;
-        -ms-flex-pack:center;
-        justify-content:center
-    }
 }
 .contact--lockup .modal{
-    padding:45px 45px;
-    text-align:center;
-    background-color:#0c0c0c;
-    box-shadow:0 0 30px 0 rgba(0,0,0,0.75)
+
+}
+.contact--lockup .modal h4{
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 .contact--lockup .modal--information p,.contact--lockup .modal--information a{
     display:block;
@@ -1266,78 +1305,7 @@ body{
 .work-request input[type="submit"]:focus{
     outline:none
 }
-.work-request--options{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    width:100%;
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-    -ms-flex-direction:column;
-    flex-direction:column;
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    -ms-flex-align:center;
-    align-items:center;
-    margin:30px 0
-}
-.work-request--options .options-a{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    width:100%;
-    -webkit-box-pack:justify;
-    -webkit-justify-content:space-between;
-    -ms-flex-pack:justify;
-    justify-content:space-between
-}
-.work-request--options .options-b{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    width:72%;
-    -webkit-flex-wrap:wrap;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap;
-    -webkit-justify-content:space-around;
-    -ms-flex-pack:distribute;
-    justify-content:space-around
-}
-.work-request--options label{
-    display:block;
-    width:200px;
-    margin-bottom:30px;
-    line-height:50px;
-    font-size:16px;
-    font-weight:700;
-    text-align:center;
-    border:2px solid #fff;
-    cursor:pointer;
-    -webkit-transition:background-color .2s ease-in-out,border-color .2s ease-in-out;
-    transition:background-color .2s ease-in-out,border-color .2s ease-in-out
-}
-.work-request--options label svg{
-    position:relative;
-    left:-5px;
-    width:0;
-    fill:#fff;
-    -webkit-transition:width .2s ease-in-out;
-    transition:width .2s ease-in-out
-}
-.work-request--options input[type="checkbox"]{
-    display:none
-}
-.work-request--options input[type="checkbox"]:checked+label{
-    background-color:#fc1152;
-    border-color:#fc1152;
-}
-.work-request--options input[type="checkbox"]:checked+label svg{
-    width:15px
-}
+
 .work-request--information{
     display:-webkit-box;
     display:-webkit-flex;
@@ -1348,36 +1316,43 @@ body{
     -webkit-justify-content:space-between;
     -ms-flex-pack:justify;
     justify-content:space-between;
-    margin-bottom:60px
+    margin-bottom:20px
 }
-.work-request--information .information-name,.work-request--information .information-email{
+.work-request--information .information-name,.work-request--information .information-email, .work-request .information-subject{
     position:relative;
     width:45%;
     height:50px;
     font-size:30px;
     font-weight:300
 }
-.work-request--information input[type="text"],.work-request--information input[type="email"]{
+.work-request .information-subject
+{
+width:100%;
+}
+.work-request--information input[type="text"],.work-request--information input[type="email"], .work-request input[type="text"]{
     width:100%;
-    padding:0 0 5px 0;
+    font-size: 20px;
+    color: black;
     background-color:transparent;
     border:none;
-    border-bottom:1px solid #fff;
+    border-bottom:1px solid black;
     border-radius:0
 }
 .work-request--information input[type="text"]:focus,.work-request--information input[type="email"]:focus{
     outline:none;
-    background-color:#0c0c0c
+    
 }
-.work-request--information label{
+.work-request label{
     position:absolute;
     top:0;
     left:0;
     pointer-events:none;
     -webkit-transition:top .2s ease-in-out,font-size .2s ease-in-out;
-    transition:top .2s ease-in-out,font-size .2s ease-in-out
+    transition:top .2s ease-in-out,font-size .2s ease-in-out;
+    color: black;
+    font-size: 16px;
 }
-.work-request--information input:focus+label,.work-request--information input.has-value+label{
+.work-request input:focus+label,.work-request input.has-value+label{
     top:-15px;
     font-size:14px
 }
